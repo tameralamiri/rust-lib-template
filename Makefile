@@ -1,4 +1,9 @@
 SHELL := /bin/bash
+# Variables
+CLIFF_CONFIG = cliff.toml
+CHANGELOG_FILE = CHANGELOG.md
+VERSION_FILE = Cargo.toml
+
 .PHONY: help
 
 help:
@@ -26,6 +31,10 @@ release: ## Release the project using cargo
 
 doc: ## Generate the documentation using cargo
 	@cargo doc
+
+changelog: ## Generate the changelog using cargo
+	@if ! cargo install --list | grep -q git-cliff; then cargo install git-cliff; fi
+	@if ! cargo install --list | grep -q cargo-dist; then cargo install cargo-dist; fi
 
 bump: ## Bump the version number
 	@echo "Current version is $(shell cargo pkgid | cut -d# -f2)"
