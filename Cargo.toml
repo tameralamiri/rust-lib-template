@@ -1,9 +1,9 @@
 [package]
-name = "rust-lib-template"
+name = "simple-rust-lib-template"
 authors = ["Tamer Alamiri <tameralamiri@gmail.com>"]
 description = "A generic template for creating Rust libraries with essential CI/CD configurations."
 license = "MIT"
-repository = "github.com/tameralamiri/rust-lib-template"
+repository = "github.com/tameralamiri/simple-rust-lib-template"
 version = "0.1.0"
 edition = "2021"
 
