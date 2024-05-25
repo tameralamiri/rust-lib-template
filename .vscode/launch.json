@@ -7,16 +7,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in library 'rust-lib-template'",
+            "name": "Debug unit tests in library 'simple-rust-lib-template'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
                     "--lib",
-                    "--package=rust-lib-template"
+                    "--package=simple-rust-lib-template"
                 ],
                 "filter": {
-                    "name": "rust-lib-template",
+                    "name": "simple-rust-lib-template",
                     "kind": "lib"
                 }
             },
