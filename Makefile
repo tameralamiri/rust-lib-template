@@ -33,8 +33,9 @@ doc: ## Generate the documentation using cargo
 	@cargo doc
 
 changelog: ## Generate the changelog using cargo
-	@if ! cargo install --list | grep -q git-cliff; then cargo install git-cliff; fi
-	@if ! cargo install --list | grep -q cargo-dist; then cargo install cargo-dist; fi
+	@if ! cargo install --list | grep -q git-cliff; then cargo install git-cliff --locked; fi
+	@if ! cargo install --list | grep -q release-plz; then cargo install release-plz --locked; fi
+	@if ! cargo install --list | grep -q cargo-dist; then cargo install cargo-dist --locked; fi
 
 bump: ## Bump the version number
 	@echo "Current version is $(shell cargo pkgid | cut -d# -f2)"
