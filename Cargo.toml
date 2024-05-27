@@ -4,7 +4,7 @@ authors = ["Tamer Alamiri <tameralamiri@gmail.com>"]
 description = "A generic template for creating Rust libraries with essential CI/CD configurations."
 license = "MIT"
 repository = "https://github.com/tameralamiri/simple-rust-lib-template"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 
 [dependencies]
